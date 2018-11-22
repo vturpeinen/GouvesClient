@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "aws s3 sync build/ s3://gouves-app-client --delete",
-    "postdeploy": "aws cloudfront create-invalidation --distribution-id E1ZERLIBNG4GVU --paths '/*'",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id E1ZERLIBNG4GVU --paths /*",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
