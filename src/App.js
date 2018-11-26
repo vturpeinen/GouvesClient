@@ -4,7 +4,6 @@ import { LinkContainer } from "react-router-bootstrap";
 import "./App.css";
 import Routes from "./Routes";
 import { Link, withRouter } from "react-router-dom";
-
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import { Auth } from "aws-amplify";
 
@@ -13,8 +12,8 @@ class App extends Component {
     super(props);
   
     this.state = {
-      isAuthenticated: false,
-      isAuthenticating: true
+      isAuthenticated: true,
+      isAuthenticating: true,
     };
   }
   async componentDidMount() {
@@ -27,9 +26,9 @@ class App extends Component {
         alert(e);
       }
     }
-  
     this.setState({ isAuthenticating: false });
   }
+  
   
   userHasAuthenticated = authenticated => {
     this.setState({ isAuthenticated: authenticated });
@@ -52,7 +51,7 @@ class App extends Component {
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Scratch</Link>
+              <Link to="/">Gouves Animal Shelter</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

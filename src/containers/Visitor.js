@@ -16,7 +16,7 @@ export default class Home extends Component {
     };
   }
   async componentDidMount() {
-    if (!this.props.isAuthenticated) {
+    if (!this.props.isVisitor) {
       return;
     }
   
@@ -78,7 +78,7 @@ export default class Home extends Component {
   renderNotes() {
     return (
       <div className="notes">
-        <PageHeader>Our Orphan Animals</PageHeader>
+        <PageHeader>Your Notes</PageHeader>
         <ListGroup>
           {!this.state.isLoading && this.renderNotesList(this.state.notes)}
         </ListGroup>

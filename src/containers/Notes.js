@@ -106,7 +106,7 @@ deleteNote() {
     event.preventDefault();
   
     const confirmed = window.confirm(
-      "Are you sure you want to delete this note?"
+      "Are you sure you want to delete this?"
     );
   
     if (!confirmed) {
